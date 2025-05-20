@@ -1,0 +1,134 @@
+/* DESIGN SYSTEM
+
+--01--COLORS */
+
+:root {
+    --grey-900: #141414;
+    --grey-800: #1f1f1f;
+    --grey-700: #333333;
+    --green: #C4F82A;
+    --white: rgb(204, 198, 188);
+}
+
+/*
+--02--TYPOGRAPHY
+LINE HEIGHT: 150% 
+FONT FAMILY: INTER
+FONT WEIGHT: 400, 600, 700
+
+--03--SPACING
+40px
+24px
+16px
+12px
+8px
+4px
+*/
+
+* {
+    /* Global Reset*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    /* To make default rem 10px */
+    font-size: 62.5%;
+    line-height: 1.5;
+}
+
+/* DESKTOP FIRST STYLE*/
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: "Inter", sans-serif;
+    background-color: var(--grey-900);
+}
+
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 38.4rem;
+    width: 100%;
+    padding: 4rem;
+    margin: 2.4rem;
+    gap: 2.4rem;
+    background-color: var(--grey-800);
+    color: var(--white);
+}
+
+.profile-img {
+    width: 8.8rem;
+    height: 8.8rem;
+    border-radius: 30%;
+}
+
+.profile-author {
+    font-size: 2.4rem;
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+}
+
+.profile-city {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 2.4rem;
+    color: var(--green);
+}
+
+.profile-description {
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+
+.profile-links {
+    width: 100%;
+}
+
+.profile-links-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    list-style: none;
+}
+
+.profile-link:link,
+.profile-link:visited {
+    display: block;
+    padding: 1.2rem;
+    text-decoration: none;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--white);
+    background-color: var(--grey-700);
+    border-radius: 8px;
+    transition: all .5s;
+}
+
+.profile-link:active,
+.profile-link:hover {
+    color: var(--grey-700);
+    background-color: var(--green);
+}
+
+/* MEDIA FOR TABLETS */
+
+@media (max-width: 768px) {
+    .profile-container {
+        max-width: 45.6rem;
+    }
+}
+
+/* MEDIA FOR MOBILE */
+@media (max-width: 386px) {
+    .profile-container {
+        max-width: 32.7rem;
+        padding: 2.4rem;
+    }
+}
